@@ -17,3 +17,18 @@ def seleccionar_palabra(llave,diccionario):
     
     return palabra
     
+
+def ingresar_nombre_usuario(mensaje: str, mensaje_error: str, minimo_len: int, maximo_len: int) -> str:
+    nombre_valido = ""
+    while True:
+        nombre = input(mensaje)
+        if minimo_len <= len(nombre) <= maximo_len:
+            nombre_valido = nombre
+            break
+        else: 
+            print(mensaje_error)
+    
+    return nombre_valido
+
+nombre = ingresar_nombre_usuario("Ingresar su nombre: ", "Nombre no valido, reingrese su nombre: ", 3, 15)
+print(f"Hola, {nombre}!")

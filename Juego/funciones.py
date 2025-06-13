@@ -9,8 +9,11 @@ def seleccionar_categoria() -> str:
     
     return llave
 
+
+def seleccionar_palabra(llave,diccionario):
     
+    indice = random.randint(0,9)
+    palabra = diccionario[llave][indice]
     
-def seleccionar_palabra(llave):
-    
+    return palabra
     

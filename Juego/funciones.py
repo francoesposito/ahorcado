@@ -37,10 +37,12 @@ def verificar_estado_juego(palabra:str, palabra_oculta:str, errores:str) -> bool
         
     return termino
     
+def calcular_puntuacion_parcial(errores,aciertos):
+    puntuacion = errores + aciertos * 3
+    return puntuacion
 
 llave = seleccionar_categoria()
 
 palabra = seleccionar_palabra(llave, palabras)
 
 print(f"Categoría: {categorias[llave]} \npalabra elegida: {palabra}")
-    

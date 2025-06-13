@@ -5,7 +5,10 @@ palabras = {
       "4" : ["futbol","maratón","olímpicos","penalti","basquet","esgrima","arquero","natacion","ciclismo","jinete"],
 }
 
-# "programacion" 1
-# "videojuegos" 2 
-# "historia" 3 
-# "deportes" 4
+categorias = {
+      "1" : "programacion",
+      "2" : "videojuegos", 
+      "3" :  "historia", 
+      "4" : "deportes"
+
+}

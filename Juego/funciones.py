@@ -1,4 +1,4 @@
-from palabras import palabras 
+from palabras import palabras, categorias
 import random
 
 
@@ -32,3 +32,13 @@ def ingresar_nombre_usuario(mensaje: str, mensaje_error: str, minimo_len: int, m
 
 nombre = ingresar_nombre_usuario("Ingresar su nombre: ", "Nombre no valido, reingrese su nombre: ", 3, 15)
 print(f"Hola, {nombre}!")
+
+def calcular_puntuacion_parcial(errores,aciertos):
+    puntuacion = errores + aciertos * 3
+    return puntuacion
+
+llave = seleccionar_categoria()
+
+palabra = seleccionar_palabra(llave, palabras)
+
+print(f"Categoría: {categorias[llave]} \npalabra elegida: {palabra}")

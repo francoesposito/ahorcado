@@ -21,6 +21,9 @@ def calcular_puntuacion_parcial(errores,aciertos):
     puntuacion = errores + aciertos * 3
     return puntuacion
 
+def calcular_puntuacion_final(puntaje_parcial,puntaje_final):
+    puntaje_final += puntaje_parcial
+
 llave = seleccionar_categoria()
 
 palabra = seleccionar_palabra(llave, palabras)

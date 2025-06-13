@@ -1,4 +1,4 @@
-from palabras import palabras 
+from palabras import palabras, categorias
 import random
 
 
@@ -16,4 +16,10 @@ def seleccionar_palabra(llave,diccionario):
     palabra = diccionario[llave][indice]
     
     return palabra
+
+llave = seleccionar_categoria()
+
+palabra = seleccionar_palabra(llave, palabras)
+
+print(f"Categoría: {categorias[llave]} \npalabra elegida: {palabra}")
     

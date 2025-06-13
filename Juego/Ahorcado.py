@@ -7,7 +7,7 @@ def jugar_ahorcado() -> None:
     seguir = "si"
     primera = True
     leaderboard = []
-    nombre = ingresar_nombre_usuario("Ingrese nombre de usuario","Error,usuario invalido",3,10)
+    nombre = ingresar_nombre_usuario("Ingrese nombre de usuario: ","Error,usuario invalido,reingrese usuario: ",3,10)
     while seguir == "si":
         categoria = seleccionar_categoria()
         palabra = seleccionar_palabra(categoria, palabras)

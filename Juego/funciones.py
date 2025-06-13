@@ -17,9 +17,12 @@ def seleccionar_palabra(llave,diccionario):
     
     return palabra
 
+def calcular_puntuacion_parcial(errores,aciertos):
+    puntuacion = errores + aciertos * 3
+    return puntuacion
+
 llave = seleccionar_categoria()
 
 palabra = seleccionar_palabra(llave, palabras)
 
 print(f"Categoría: {categorias[llave]} \npalabra elegida: {palabra}")
-    

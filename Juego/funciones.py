@@ -17,6 +17,27 @@ def seleccionar_palabra(llave,diccionario):
     
     return palabra
 
+
+def actualizar_palabra_oculta(palabra:str, palabra_oculta:str, letra_ingresada:str) -> str:
+    i = 0
+    
+    for letra in palabra:
+        if letra_ingresada == palabra[i]:
+            palabra_oculta[i] = palabra_oculta
+        i += 1
+        
+    return palabra_oculta
+
+def verificar_estado_juego(palabra:str, palabra_oculta:str, errores:str) -> bool:
+    
+    termino = False
+    
+    if (palabra == palabra_oculta) or errores == 7:
+        termino = True
+        
+    return termino
+    
+
 llave = seleccionar_categoria()
 
 palabra = seleccionar_palabra(llave, palabras)

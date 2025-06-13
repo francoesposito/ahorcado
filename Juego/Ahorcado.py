@@ -23,7 +23,7 @@ def jugar_ahorcado() -> None:
         while termino != True and seguir == "si":
             inicio = time.time()
             puntuacion_final = 0
-            print(f"Categoría: {categoria}\nPalabra: {palabra_oculta}")
+            print(f"Categoría: {categorias[categoria]}\nPalabra: {palabra_oculta}")
             letra = input("Ingrese una letra: ") 
             aciertos = sumar_aciertos(palabra, letra, aciertos, palabra_oculta)
             palabra_oculta = actualizar_palabra_oculta(palabra, palabra_oculta, letra)

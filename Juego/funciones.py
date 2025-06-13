@@ -30,9 +30,6 @@ def ingresar_nombre_usuario(mensaje: str, mensaje_error: str, minimo_len: int, m
     
     return nombre_valido
 
-nombre = ingresar_nombre_usuario("Ingresar su nombre: ", "Nombre no valido, reingrese su nombre: ", 3, 15)
-print(f"Hola, {nombre}!")
-
 
 def actualizar_palabra_oculta(palabra:str, palabra_oculta:str, letra_ingresada:str) -> str:
     i = 0
@@ -88,18 +85,20 @@ def verificar_estado_juego(palabra:str, palabra_oculta:str, errores:str) -> bool
         
     return termino
     
-def calcular_puntuacion_parcial(errores,aciertos):
-    puntuacion = errores + aciertos * 3
+def calcular_puntuacion_final(errores,aciertos):
+    puntuacion = (-errores) + aciertos * 3
     return puntuacion
-
-def calcular_puntuacion_final(puntaje_parcial,puntaje_final):
-    puntaje_final += puntaje_parcial
     
 def mostrar_palabra_oculta(palabra):
     palabra_oculta = ""
     for letra in palabra:
         palabra_oculta += "_"
     return palabra_oculta
+
+def guardar_puntuacion(leaderboard,nombre,tematica,palabra,puntuacion,tiempo):
+    jugador = [{"nombre": nombre,"tematica":categorias[tematica],"palabra": palabra,"puntuacion": puntuacion,"tiempo": tiempo}]
+    leaderboard += jugador
+    return leaderboard
 
 
 # llave = seleccionar_categoria()
